@@ -9,7 +9,7 @@ const closeBtn = document.querySelector('.close-btn').addEventListener('click', 
 
 });
 const playAgain = document.querySelector('.play-again').addEventListener('click', () => {
-    gameSection.style.backgroundImage = 'url(/images/bg-triangle.svg)'
+    gameSection.style.backgroundImage = 'url(/rock-paper-scissors/images/bg-triangle.svg)'
     gameSection.style.opacity = '1'
     decisionSection.style.display = 'none'
     document.querySelector('.player-choice').style.boxShadow = 'none'
@@ -27,9 +27,9 @@ const scissors = document.querySelector('.scissors');
 const decision = document.querySelector('.decision')
 
 const choices = [
-    '/images/assets/Rock.png',
-    '/images/assets/Paper.png',
-    '/images/assets/Scissors.png',
+    '/rock-paper-scissors/images/assets/Rock.png',
+    '/rock-paper-scissors/images/assets/Paper.png',
+    '/rock-paper-scissors/images/assets/Scissors.png',
 ]
 
 let count = 0

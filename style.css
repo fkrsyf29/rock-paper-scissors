@@ -291,7 +291,7 @@ main .game-section {
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
   margin-left: 50%;
-  background-image: url(/images/bg-triangle.svg);
+  background-image: url(/rock-paper-scissors/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center center;
   margin-top: 100px;
