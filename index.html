@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <link rel='stylesheet' href='style.css'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Rock, paper, scissors</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div><img src='/images/logo.svg' alt='choices' /></div>
+            <div class='score-board'>
+                <h1>score</h1>
+                <p class='count'>0</p>
+            </div>
+        </header>
+        <div class='overlay'></div>
+        <div class='game-section'>
+            <div><img class='paper' src='/images/assets/Paper.png' alt='paper' /></div>
+            <div><img class='scissors' src='/images/assets/Scissors.png' alt='scissors' /></div>
+            <div><img class='rock' src='/images/assets/Rock.png' alt='rock' /></div>
+        </div>
+        <div class='rules'>
+            <div class='header'>
+                <p>rules</p>
+                <div><img class='close-btn' src='/images/icon-close.svg' alt='close-rules' /></div>
+            </div>
+            <div><img src='/images/image-rules.svg' alt='rules-display' /></div>
+        </div>
+
+        <div><button class='rules-btn'>rules</button></div>
+
+        <div class='decision-section'>
+            <div class='player-decision'>
+                <h1>you picked</h1>
+                <div><img class='player-choice' src='/images/assets/Scissors.png' alt='choice-player' /></div>
+            </div>
+            <div class='decision'>
+                <h1 class='verdict'>you win</h1>
+                <button class='play-again'>play again</button>
+            </div>
+            <div class='house-decision'>
+                <h1>the house picked</h1>
+                <div><img class='house-choice' src='/images/assets/Paper.png' alt='choice-house' /></div>
+            </div>
+        </div>
+    </main>
+    <script src='script.js'></script>
+</body>
+
+</html>

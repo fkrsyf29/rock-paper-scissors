@@ -1,0 +1,668 @@
+@-webkit-keyframes playerAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-10vw);
+            transform: translateX(-10vw);
+  }
+}
+
+@keyframes playerAnimation {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-10vw);
+            transform: translateX(-10vw);
+  }
+}
+
+@-webkit-keyframes verdictAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes verdictAnimate {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5s;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes houseAnimation {
+  0% {
+    -webkit-transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+            transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(10vw);
+            transform: translateX(10vw);
+    opacity: 1;
+  }
+}
+
+@keyframes houseAnimation {
+  0% {
+    -webkit-transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+            transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(10vw);
+            transform: translateX(10vw);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes playerAnimationMobile {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
+  }
+}
+
+@keyframes playerAnimationMobile {
+  0% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  50% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+  }
+  100% {
+    -webkit-transform: translateX(-5vw);
+            transform: translateX(-5vw);
+  }
+}
+
+@-webkit-keyframes houseAnimationMobile {
+  0% {
+    -webkit-transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+            transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
+    opacity: 1;
+  }
+}
+
+@keyframes houseAnimationMobile {
+  0% {
+    -webkit-transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+            transform: translateX(0) rotate3d(0, 1, 0, 400deg);
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  75% {
+    -webkit-transform: translateX(0);
+            transform: translateX(0);
+    opacity: 0.5;
+  }
+  100% {
+    -webkit-transform: translateX(5vw);
+            transform: translateX(5vw);
+    opacity: 1;
+  }
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: radial-gradient(#1f3756, #141539);
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  overflow-x: hidden;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+main header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 45vw;
+  min-width: 500px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-left: 50%;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 50px;
+}
+
+main header .score-board {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background: #fff;
+  width: 120px;
+  height: 100px;
+  border-radius: 10px;
+  gap: 5px;
+}
+
+main header .score-board h1 {
+  font-size: 15px;
+  color: #2a46c0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+main header .score-board p {
+  font-weight: bold;
+  font-size: 50px;
+}
+
+main .overlay {
+  width: 100%;
+  height: 100%;
+  z-index: 9;
+  position: absolute;
+  background: rgba(20, 21, 57, 0.4);
+  display: none;
+}
+
+main .game-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  margin-left: 50%;
+  background-image: url(/images/bg-triangle.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  margin-top: 100px;
+  width: 500px;
+  gap: 10px 80px;
+}
+
+main .game-section div > img {
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+main .game-section div > img:hover {
+  -webkit-animation: swing 2s infinite;
+          animation: swing 2s infinite;
+}
+
+main .rules {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  background: #fff;
+  padding: 30px 50px 50px 50px;
+  border-radius: 10px;
+  -webkit-transform: translate(-50%, 40%);
+          transform: translate(-50%, 40%);
+  margin-left: 50%;
+  z-index: -2;
+  opacity: 0;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .rules.active {
+  opacity: 100%;
+  z-index: 10;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .rules .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0 200px;
+  margin-bottom: 50px;
+  width: 300px;
+}
+
+main .rules .header p {
+  text-transform: uppercase;
+  font-size: 25px;
+}
+
+main .rules .header div > img {
+  cursor: pointer;
+}
+
+main .rules div > img {
+  width: 100%;
+}
+
+main .rules-btn {
+  text-transform: uppercase;
+  padding: 10px 40px;
+  background: none;
+  border: 2px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  -webkit-transform: translate(-20%, 10%);
+          transform: translate(-20%, 10%);
+  position: absolute;
+  right: 0;
+}
+
+main .decision-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  color: #fff;
+  text-transform: uppercase;
+  -webkit-transform: translate(-50%, 300px);
+          transform: translate(-50%, 300px);
+  margin-left: 50%;
+  gap: 50px;
+  display: none;
+}
+
+main .decision-section .player-decision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .decision-section .player-decision h1 {
+  font-size: 25px;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+main .decision-section .player-decision h1.active {
+  -webkit-animation: playerAnimation 2s forwards;
+          animation: playerAnimation 2s forwards;
+}
+
+main .decision-section .player-decision div > img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+main .decision-section .player-decision div > img.active {
+  -webkit-animation: playerAnimation 2s forwards;
+          animation: playerAnimation 2s forwards;
+}
+
+main .decision-section .decision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px 0;
+  position: absolute;
+  opacity: 0;
+  z-index: 1;
+}
+
+main .decision-section .decision.active {
+  -webkit-animation: verdictAnimate 2s forwards;
+          animation: verdictAnimate 2s forwards;
+  -webkit-animation-delay: 2s;
+          animation-delay: 2s;
+}
+
+main .decision-section .decision h1 {
+  font-size: 45px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+}
+
+main .decision-section .decision button {
+  font-size: 15px;
+  letter-spacing: 3px;
+  font-family: 'Barlow Semi Condensed', sans-serif;
+  color: #3b4363;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 50px;
+  background: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .decision-section .decision button:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+main .decision-section .house-decision {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+main .decision-section .house-decision h1 {
+  font-size: 25px;
+  margin-bottom: 50px;
+  letter-spacing: 3px;
+  white-space: nowrap;
+  z-index: 1;
+}
+
+main .decision-section .house-decision h1.active {
+  -webkit-animation: houseAnimation 2s forwards;
+          animation: houseAnimation 2s forwards;
+}
+
+main .decision-section .house-decision div > img {
+  width: 250px;
+  border-radius: 50%;
+}
+
+main .decision-section .house-decision div > img.active {
+  -webkit-animation: houseAnimation 2s forwards;
+          animation: houseAnimation 2s forwards;
+}
+
+@media (max-width: 700px) {
+  main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    overflow-x: hidden;
+  }
+  main header {
+    width: 85vw;
+    min-width: 0;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin: 20px 0;
+    z-index: 1;
+    padding: 15px;
+  }
+  main header div > img {
+    width: 120px;
+  }
+  main header .score-board {
+    width: 80px;
+    height: 80px;
+    gap: 0;
+    padding-top: 10px;
+  }
+  main header .score-board h1 {
+    font-size: 12px;
+  }
+  main .game-section {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin: 0;
+    width: 90vw;
+    background-size: 210px;
+    background-size: 50vw;
+    margin-top: 50px;
+  }
+  main .game-section div > img {
+    width: 30vw;
+  }
+  main .rules {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-left: 0;
+    height: 80%;
+    width: 350px;
+    top: 100px;
+  }
+  main .rules .header {
+    gap: 0;
+    margin-bottom: 80px;
+  }
+  main .rules .header div > img {
+    position: absolute;
+    width: 15px;
+    bottom: 5%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    left: 50%;
+  }
+  main .rules-btn {
+    position: relative;
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-top: 100px;
+  }
+  main .decision-section {
+    -webkit-transform: translate(0);
+            transform: translate(0);
+    margin-left: 0;
+  }
+  main .decision-section .player-decision {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main .decision-section .player-decision h1 {
+    font-size: 15px;
+  }
+  main .decision-section .player-decision h1.active {
+    -webkit-animation: playerAnimationMobile 2s forwards;
+            animation: playerAnimationMobile 2s forwards;
+  }
+  main .decision-section .player-decision div > img {
+    width: 30vw;
+  }
+  main .decision-section .player-decision div > img.active {
+    -webkit-animation: playerAnimationMobile 2s forwards;
+            animation: playerAnimationMobile 2s forwards;
+  }
+  main .decision-section .decision {
+    margin-top: 350px;
+  }
+  main .decision-section .house-decision {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  main .decision-section .house-decision h1 {
+    font-size: 15px;
+  }
+  main .decision-section .house-decision h1.active {
+    -webkit-animation: houseAnimationMobile 2s forwards;
+            animation: houseAnimationMobile 2s forwards;
+  }
+  main .decision-section .house-decision div > img {
+    width: 30vw;
+  }
+  main .decision-section .house-decision div > img.active {
+    -webkit-animation: houseAnimationMobile 2s forwards;
+            animation: houseAnimationMobile 2s forwards;
+  }
+}
+/*# sourceMappingURL=style.css.map */

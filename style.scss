@@ -1,0 +1,294 @@
+@import '_variables';
+@import '_keyframesMixins';
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: radial-gradient($radialGradientFrom, $radialGradientTo);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    header {
+        @include flex(row, space-between);
+        width: 45vw;
+        min-width: 500px;
+        transform: translateX(-50%);
+        margin-left: 50%;
+        border: 4px solid hsla(0, 0, 100%, 0.3);
+        border-radius: 10px;
+        padding: 20px;
+        margin-top: 50px;
+        .score-board {
+            @include flex(column, center);
+            background: #fff;
+            width: 120px;
+            height: 100px;
+            border-radius: 10px;
+            gap: 5px;
+            h1 {
+                font-size: 15px;
+                color: $scoreText;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+            p {
+                font-weight: bold;
+                font-size: 50px;
+            }
+        }
+    }
+    .overlay {
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        position: absolute;
+        background: hsla(237, 49%, 15%, 0.4);
+        display: none;
+    }
+    .game-section {
+        @include flex(row, center);
+        flex-wrap: wrap;
+        transform: translateX(-50%);
+        margin-left: 50%;
+        background-image: url(/images/bg-triangle.svg);
+        background-repeat: no-repeat;
+        background-position: center center;
+        margin-top: 100px;
+        width: 500px;
+        gap: 10px 80px;
+        div>img {
+            cursor: pointer;
+            border-radius: 50%;
+            &:hover {
+                animation: swing 2s infinite;
+            }
+        }
+    }
+    .rules {
+        @include flex(column, center);
+        position: absolute;
+        background: #fff;
+        padding: 30px 50px 50px 50px;
+        border-radius: 10px;
+        transform: translate(-50%, 40%);
+        margin-left: 50%;
+        z-index: -2;
+        opacity: 0;
+        transition: 0.5s;
+        &.active {
+            opacity: 100%;
+            z-index: 10;
+            transition: 0.5s;
+        }
+        .header {
+            @include flex(row, center);
+            gap: 0 200px;
+            margin-bottom: 50px;
+            width: 300px;
+            p {
+                text-transform: uppercase;
+                font-size: 25px;
+            }
+            div>img {
+                cursor: pointer;
+            }
+        }
+        div>img {
+            width: 100%;
+        }
+    }
+    .rules-btn {
+        text-transform: uppercase;
+        padding: 10px 40px;
+        background: none;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        color: #fff;
+        cursor: pointer;
+        transform: translate(-20%, 10%);
+        position: absolute;
+        right: 0;
+    }
+    .decision-section {
+        @include flex(row, center);
+        position: absolute;
+        color: #fff;
+        text-transform: uppercase;
+        transform: translate(-50%, 300px);
+        margin-left: 50%;
+        gap: 50px;
+        display: none;
+        .player-decision {
+            @include flex(column, center);
+            h1 {
+                @include player_house();
+                &.active {
+                    animation: playerAnimation 2s forwards;
+                }
+            }
+            div>img {
+                width: 250px;
+                border-radius: 50%;
+                &.active {
+                    animation: playerAnimation 2s forwards;
+                }
+            }
+        }
+        .decision {
+            @include flex(column, center);
+            gap: 10px 0;
+            position: absolute;
+            opacity: 0;
+            z-index: 1;
+            &.active {
+                animation: verdictAnimate 2s forwards;
+                animation-delay: 2s;
+            }
+            h1 {
+                font-size: 45px;
+                letter-spacing: 3px;
+                white-space: nowrap;
+            }
+            button {
+                font-size: 15px;
+                letter-spacing: 3px;
+                font-family: 'Barlow Semi Condensed', sans-serif;
+                color: $darkText;
+                text-transform: uppercase;
+                border: none;
+                border-radius: 5px;
+                padding: 15px 50px;
+                background: #fff;
+                cursor: pointer;
+                white-space: nowrap;
+                transition: 0.5s;
+                &:hover {
+                    transform: scale(1.05);
+                    transition: 0.5s;
+                }
+            }
+        }
+        .house-decision {
+            @include flex(column, center);
+            h1 {
+                @include player_house();
+                &.active {
+                    animation: houseAnimation 2s forwards;
+                }
+            }
+            div>img {
+                width: 250px;
+                border-radius: 50%;
+                &.active {
+                    animation: houseAnimation 2s forwards;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:700px) {
+    main {
+        justify-content: center;
+        align-items: center;
+        overflow-x: hidden;
+        header {
+            width: 85vw;
+            min-width: 0;
+            transform: translate(0);
+            margin: 20px 0;
+            z-index: 1;
+            padding: 15px;
+            div>img {
+                width: 120px;
+            }
+            .score-board {
+                width: 80px;
+                height: 80px;
+                gap: 0;
+                padding-top: 10px;
+                h1 {
+                    font-size: 12px;
+                }
+            }
+        }
+        .game-section {
+            transform: translate(0);
+            margin: 0;
+            width: 90vw;
+            background-size: 210px;
+            background-size: 50vw;
+            margin-top: 50px;
+            div>img {
+                width: 30vw;
+            }
+        }
+        .rules {
+            transform: translate(0);
+            margin-left: 0;
+            height: 80%;
+            width: 350px;
+            top: 100px;
+            .header {
+                gap: 0;
+                margin-bottom: 80px;
+                div>img {
+                    position: absolute;
+                    width: 15px;
+                    bottom: 5%;
+                    transform: translateX(-50%);
+                    left: 50%;
+                }
+            }
+        }
+        .rules-btn {
+            position: relative;
+            transform: translate(0);
+            margin-top: 100px;
+        }
+        .decision-section {
+            transform: translate(0);
+            margin-left: 0;
+            .player-decision {
+                flex-direction: column-reverse;
+                h1 {
+                    font-size: 15px;
+                    &.active {
+                        animation: playerAnimationMobile 2s forwards;
+                    }
+                }
+                div>img {
+                    width: 30vw;
+                    &.active {
+                        animation: playerAnimationMobile 2s forwards;
+                    }
+                }
+            }
+            .decision {
+                margin-top: 350px;
+            }
+            .house-decision {
+                flex-direction: column-reverse;
+                h1 {
+                    font-size: 15px;
+                    &.active {
+                        animation: houseAnimationMobile 2s forwards;
+                    }
+                }
+                div>img {
+                    width: 30vw;
+                    &.active {
+                        animation: houseAnimationMobile 2s forwards;
+                    }
+                }
+            }
+        }
+    }
+}
